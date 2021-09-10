@@ -1,4 +1,4 @@
-# Final Project - Generative NFT Collection
+# Final Project - NFT Collection Generator (NCG)
 
 [Link To This Project Repo](https://github.com/phutngo/blockchain-developer-bootcamp-final-project)
 
@@ -6,32 +6,48 @@
 
 ## Overview
 
-Ultimately, I want to create a lean process to generate NFT collections.
-This final project can be the proof of concept for this.
+Given sets of layers of images, I want to create a lean process to generate a collection of NFTs. For example given 10 layers of images and 10 variations per layer, NCG outputs 10000 NFTs of images that combined those layers.
 
 ## Features
 
-1. Images Generator - Given a set of attributes as image layers - merge the attributes together to generate the final art and corresponding metadata.
-2. Host images - Bonus points if images are hosted on IPFS
-3. Deploy the images collection as NFTs on the Ethereum Blockchain using openzeppelin smart contract templates for [ERC 721] (https://docs.openzeppelin.com/contracts/4.x/api/token/erc721)
-4. Optionally post them for sale on opensea/rarible. 
-5. Optionally lazy minting.
-6. Front End - React - users can see the images collection.
-   1. Users can filter based on attributes. 
-   2. NFT's that are not available for purchase (because it's been sold) are dimmed.
-   3. User can click "buy button" on the NFT and metamask opens. We load the appropriate data package and our smart contract address into metamask for user to submit the send transaction.
-   4. The NFT is then assigned/transferred to user's eth account.
+### Module 1 - Image Processing/Generating
+1. Given _n_ layers with each layer having _m_ variations, merge all the layers into random images which is a subset of _n^m_ images.
+2. Produce metadata for these images that fit [Opensea Metadata Standards](https://docs.opensea.io/docs/metadata-standards).
+3. Allow config that a specific variation only shows up if another variation shows up.
+4. Allow config that a subset of the n layers must be unique. Example, you want your images to be unique without counting the background. Without the config if we do a naive way there would be images that are identical but with different backgrounds.
+5. Provide summary statistics such as rarity of each variation.
+6. Fast enough to produce 10000 images that are of decent resolution such as 1200x1200px.
+
+#### Techstack
+Node.js
+
+### Module 2 - Smart Contract / Backend
+1. Programatically upload the images to IPFS
+2. Deploy the images collection as NFTs on the Ethereum Blockchain using OpenZeppelin smart contract templates for [ERC 721](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721)
+3. Optional/Bonus - Programatically post images for sale on opensea/rarible
+4. Optioanl/Bonus - Lazy minting
+
+#### Techstack
+Node.js
+Solidity
+Truffle React Box?
+Scaffold Eth?
+Web3js or ethersjs?
+hardhat or truffle?
 
 
-### Techstack
+### Module 3 - Frontend
+1. A React frontend where users can see the images collection
+2. Users can filter based on the layers and each variations
+3. 
+4. User can click "buy button" on the NFT and metamask opens. We load the appropriate transaction data and our smart contract address into Metamask for user to submit the transaction.
+5. The NFT is then assigned/transferred to user's eth account.
+6. Our website updates - by putting a SOLD sticker on the NFT's has been sold
+
+#### Techstack
 1. React
 2. Material UI
-3. Zustand for state management
-4. NodeJS
-5. Solidity
-6. Web3js or ethersjs?
-7. hardhat or truffle?
-
+3. Zustand (for state management)
 
 ## Final Project Checklist
 

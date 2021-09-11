@@ -2,7 +2,9 @@
 
 ## Overview
 
-Given sets of layers of images, I want to create a lean process to generate a collection of NFTs. For example given 10 layers of images and 10 variations per layer, NCG outputs 10000 NFTs of images that combined those layers.
+There is a high demand from artists to share their creativity by producing large collections of semi-generative art that combines layers of images into many different holistic images. These artists have the skills to create the individual layers of images, but they lack the skills and tools to turn these individual images into a large collection of holistic images. For example given 10 layers of images and 10 variations per layer, the artists want to create 10000 NFT's.
+
+This project is to create a lean pipeline that turns these layers of images into a large collection of NFTs (e.g. 10000 NFTs) that are browsable and buyable through a website.
 
 ## Features
 

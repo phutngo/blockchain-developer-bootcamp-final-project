@@ -1,9 +1,5 @@
 # Final Project - NFT Collection Generator (NCG)
 
-[Link To This Project Repo](https://github.com/phutngo/blockchain-developer-bootcamp-final-project)
-
-[Final Project Ch1 Instructions](https://courses.consensys.net/courses/take/blockchain-developer-bootcamp-registration-2021/surveys/26729108-exercise-your-final-project-idea)
-
 ## Overview
 
 Given sets of layers of images, I want to create a lean process to generate a collection of NFTs. For example given 10 layers of images and 10 variations per layer, NCG outputs 10000 NFTs of images that combined those layers.
@@ -39,7 +35,6 @@ hardhat or truffle?
 ### Module 3 - Frontend
 1. A React frontend where users can see the images collection
 2. Users can filter based on the layers and each variations
-3. 
 4. User can click "buy button" on the NFT and metamask opens. We load the appropriate transaction data and our smart contract address into Metamask for user to submit the transaction.
 5. The NFT is then assigned/transferred to user's eth account.
 6. Our website updates - by putting a SOLD sticker on the NFT's has been sold
@@ -48,6 +43,8 @@ hardhat or truffle?
 1. React
 2. Material UI
 3. Zustand (for state management)
+
+
 
 ## Final Project Checklist
 
